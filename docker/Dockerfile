@@ -2,6 +2,10 @@ FROM java:openjdk-8-jdk
 
 ENV spark_ver 2.4.0
 
+# Kubernetes needs
+RUN apt-get update; \
+    apt-get install socat
+
 # Get Spark from US Apache mirror.
 RUN mkdir -p /opt && \
     cd /opt && \
