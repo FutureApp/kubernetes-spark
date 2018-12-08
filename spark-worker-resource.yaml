@@ -24,11 +24,11 @@ spec:
             memory : "512Mi"
           limits :
              cpu : 1
-             memory : "1Gi"
+             memory : "2Gi"
 
         command:
          - "/bin/bash"
          - "-c"
          - "--"
         args :
-                - '. ./start-common.sh ; /opt/spark/sbin/start-slave.sh spark://spark-master:7077 -c 1 -m 1G ; sleep infinity'
+                - '. ./start-common.sh ; /opt/spark/sbin/start-slave.sh spark://spark-master:7077 -c 1 -m 2G ; sleep infinity'
