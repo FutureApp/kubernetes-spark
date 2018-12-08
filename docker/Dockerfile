@@ -10,7 +10,7 @@ RUN apt-get update; \
 # Get Spark from US Apache mirror.
 RUN mkdir -p /opt && \
     cd /opt && \
-    curl https://www.apache.org/dyn/closer.lua/spark/spark-${spark_ver}/spark-${spark_ver}-bin-hadoop${hadoop_ver}.tgz | \
+    curl http://ftp.halifax.rwth-aachen.de/apache/spark/spark-${spark_ver}/spark-${spark_ver}-bin-hadoop${hadoop_ver}.tgz | \
         tar -zx && \
     ln -s spark-${spark_ver}-bin-hadoop${hadoop_ver} spark && \
     echo Spark ${spark_ver} installed in /opt
